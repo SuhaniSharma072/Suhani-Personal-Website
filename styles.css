@@ -4,13 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 body {
     background-color: #00008B;
     font-family: "Playfair Display", serif;
     color: whitesmoke;
-    cursor: url('vector-illustration-rocket-icon-image-png-701751694966760xqxrwxd6te.png'), auto;
+    
 }
 
 .topbar {
@@ -176,3 +177,12 @@ body {
     margin-top: 1cm ;
 }
 
+/*for the cursor*/
+
+#cursor {
+    position: fixed;
+    font-size: 24px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%) rotate(45deg);
+}

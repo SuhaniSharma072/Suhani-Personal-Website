@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+   
     <div class="topbar">
         <a href="#section1">About Me</a>
         <a href="#section2">Projects</a>
         <a href="#section3">Contact</a>
     </div>
+
+    <!--do this to make cursor a rocketship emoji instead-->
+    
+    <div id="cursor">🚀</div>
+    <script>    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });</script>
 
 <div class="hero">
     <div class="hero-left">
@@ -42,8 +52,13 @@
     </div>
 
     <div class="section" id="section2">
-        <h2>Projects</h2>
-        <p>Coming soon...</p>
+        <h2>Projects/Achievements</h2>
+        <p>Most of my projects and achievements are related to the STEM and Business field</p>
+        <p>⭐ One pending patent for preventing hydroplaning</p>
+        <p>⭐ One pending patent for sharkfin blind spot sensor using lidar ray technology for older cars</p>
+        <p>⭐received letter of recognition from TX Rep for innovative work in a felicitation ceremony</p>
+        <p>⭐Received Athena Award from Hack Club and invited to Parthenon, world's largest all teen-girl hackathon</p>
+        
     </div>
 
     <div class="section" id="section3">
