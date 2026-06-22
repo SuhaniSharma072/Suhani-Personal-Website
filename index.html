@@ -3,91 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suhani's Portfolio</title>
+    <title>Suhani Sharma</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-   
-    <div class="topbar">
+
+<canvas id="stars"></canvas>
+
+<div id="cursor">&#128640;</div>
+<script>
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+</script>
+
+<nav class="topbar">
+    <div class="logo">S<span class="logo-dot">&#10022;</span>S</div>
+    <div class="nav-links">
         <a href="#section1">About Me</a>
         <a href="#section2">Projects</a>
         <a href="#section3">Contact</a>
     </div>
-
-    <!--do this to make cursor a rocketship emoji instead-->
-    
-    <div id="cursor">🚀</div>
-    <script>    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });</script>
+</nav>
 
 <div class="hero">
     <div class="hero-left">
-        <h1>Hi, I'm Suhani</h1>
-        <h3>Tende ad lunam, et si defecis, inter stellas cades</h3>
+        <h1>Hi, I'm <span class="name-highlight">Suhani</span></h1>
+        <p class="latin-quote">Tende ad lunam, et si defecis,<br>inter stellas cades</p>
+        <div class="hero-cta">
+            <a href="#section2" class="btn-primary">View My Work</a>
+            <a href="#section3" class="btn-ghost">Get in Touch</a>
+        </div>
     </div>
-    <img
-        src="https://cdn.pixabay.com/animation/2025/11/17/09/22/09-22-53-548_512.gif"
-        alt="gif"
-        class="gif"
-    />
+    <div class="hero-right">
+        <div class="orbit-ring">
+            <img
+                src="https://cdn.pixabay.com/animation/2025/11/17/09/22/09-22-53-548_512.gif"
+                alt="Space gif"
+                class="gif"
+            />
+            <div class="orbit-dot dot1"></div>
+            <div class="orbit-dot dot2"></div>
+            <div class="orbit-dot dot3"></div>
+        </div>
+    </div>
 </div>
 
-    <div class="section" id="section1">
+<div class="section" id="section1">
+    <div class="section-inner">
         <h2>About Me</h2>
-        <p>I'm a sophomore from Texas and I'm interested in Computer Science and Entrepreneurship.</p>
-        <p> The quote above is a Latin translation of my favorite quote: "Reach for the moon, even if you </p>
-        <p>miss, you'll land among the stars", by Norman Vincent Peale.</p>
-        <p>This quote resonates with my belief that, if you work really hard on something you want with </p>
-        <p>all your heart, you will get it. And even if you don't, you will be wayy better off than you would</p>
-        <p> have been had you not tried at all. So ALWAYS give it a shot.</p>
+        <p class="section-body">I'm a sophomore from Texas and I'm interested in Computer Science and Entrepreneurship.</p>
+        <p class="section-body">The quote above is a Latin translation of my favorite quote: "Reach for the moon, even if you miss, you'll land among the stars", by Norman Vincent Peale.</p>
+        <p class="section-body">This quote resonates with my belief that, if you work really hard on something you want with all your heart, you will get it. And even if you don't, you will be wayy better off than you would have been had you not tried at all. So ALWAYS give it a shot.</p>
         <div class="about-cards">
-            <div class="card"> Favorite Subjects: Latin & Spanish</div>
-            <div class="card"> Future Career: Entrepreneur</div>
-            <div class="card"> Favorite Hobby: Calligraphy</div>
+            <div class="card">
+                <div class="card-label">Favorite Subjects</div>
+                <div class="card-value">Latin &amp; Spanish</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Future Career</div>
+                <div class="card-value">Entrepreneur</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Favorite Hobby</div>
+                <div class="card-value">Calligraphy</div>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="section" id="section2">
-        <h2>Projects/Achievements</h2>
-        <p>Most of my projects and achievements are related to the STEM and Business field</p>
-        <p>⭐ One pending patent for preventing hydroplaning</p>
-        <p>⭐ One pending patent for sharkfin blind spot sensor using lidar ray technology for older cars</p>
-        <p>⭐received letter of recognition from TX Rep for innovative work in a felicitation ceremony</p>
-        <p>⭐Received Athena Award from Hack Club and invited to Parthenon, world's largest all teen-girl hackathon</p>
-        <p>⭐More coming soon...</p>
+<div class="section" id="section2">
+    <div class="section-inner">
+        <h2>Projects / Achievements</h2>
+        <p class="section-body">Most of my projects and achievements are related to the STEM and Business field.</p>
+
+        <div class="projects-list">
+
+            <div class="project-row">
+                <span class="proj-num">01</span>
+                <div class="proj-body">
+                    <div class="proj-meta">Research &nbsp;&middot;&nbsp; Published</div>
+                    <h3>Published AI Research</h3>
+                    <p>Peer-reviewed paper in the <em>Innovations Journal</em>, exploring AI applications in human development.</p>
+                </div>
+                <a href="https://innovationsjournals-iddb.kglmeridian.com/view/journals/idhd/5/2025/article-p49.xml" target="_blank" class="proj-link">
+                    Read Paper <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="project-row">
+                <span class="proj-num">02</span>
+                <div class="proj-body">
+                    <div class="proj-meta">App &nbsp;&middot;&nbsp; Computer Vision</div>
+                    <h3>Calligraphy Learning App</h3>
+                    <p>Real-time pen angle &amp; stroke feedback using computer vision. Brand sponsors: Tombow, Sakura, Karin &amp; Crayola.</p>
+                </div>
+                <span class="proj-link muted">Coming to App Store</span>
+            </div>
+
+            <div class="project-row">
+                <span class="proj-num">03</span>
+                <div class="proj-body">
+                    <div class="proj-meta">Patent Pending</div>
+                    <h3>Hydroplaning Prevention System</h3>
+                    <p>One pending patent for preventing hydroplaning.</p>
+                </div>
+            </div>
+
+            <div class="project-row">
+                <span class="proj-num">04</span>
+                <div class="proj-body">
+                    <div class="proj-meta">Patent Pending</div>
+                    <h3>Lidar Blind Spot Sensor</h3>
+                    <p>One pending patent for a sharkfin blind spot sensor using lidar ray technology for older cars.</p>
+                </div>
+            </div>
+
+            <div class="project-row">
+                <span class="proj-num">05</span>
+                <div class="proj-body">
+                    <div class="proj-meta">Recognition &nbsp;&middot;&nbsp; Texas Legislature</div>
+                    <h3>Letter from TX State Representative</h3>
+                    <p>Received letter of recognition from TX Rep for innovative work in a felicitation ceremony.</p>
+                </div>
+            </div>
+
+            <div class="project-row">
+                <span class="proj-num">06</span>
+                <div class="proj-body">
+                    <div class="proj-meta">Award &nbsp;&middot;&nbsp; Hack Club</div>
+                    <h3>Athena Award &amp; Parthenon Invite</h3>
+                    <p>Awarded by Hack Club in collaboration with MIT, the U.S. Congressional App Challenge, Girls Who Code, and GitHub — for shipping 10 projects across 33 hours of work. Recognized for outstanding independent project development and contributions to Hack Club's worldwide community of young creators.</p>
+                </div>
+                <a href="https://athena.hackclub.com/award?id=RnbPioHE" target="_blank" class="proj-link">
+                    View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="project-row">
+                <span class="proj-num">07</span>
+                <div class="proj-body">
+                    <div class="proj-meta">Open Source &nbsp;&middot;&nbsp; GitHub</div>
+                    <h3>Code &amp; Projects</h3>
+                    <p>Explore my code and experiments on GitHub.</p>
+                </div>
+                <a href="https://github.com/SuhaniSharma072" target="_blank" class="proj-link">
+                    View GitHub <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+        </div>
     </div>
+</div>
 
-    <div class="section" id="section3">
+<div class="section" id="section3">
+    <div class="section-inner contact-inner">
         <h2>Contact</h2>
-        <p>Feel free to reach out!</p>
-        <div class="contact-buttons">
-            <a href="mailto:suhanisharma072@gmail.com" class="contact-btn gmail">
-                <i class="fa-brands fa-google"></i> Gmail
+        <p class="section-body">Feel free to reach out!</p>
+        <div class="contact-icons">
+            <a href="mailto:suhanisharma072@gmail.com" class="contact-icon" aria-label="Email">
+                <i class="fa-brands fa-google"></i>
             </a>
-            <!--change to my own linkedin profile-->
-            <a href="https://www.linkedin.com/in/suhani-sharma-004241369/" target="_blank" class="contact-btn linkedin">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            <a href="https://www.linkedin.com/in/suhani-sharma-004241369/" target="_blank" class="contact-icon" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/SuhaniSharma072" target="_blank" class="contact-icon" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
             </a>
         </div>
     </div>
-    <section class="spotify-section" aria-label="Spotify playlist">
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/playlist/70TbnJdMHAZx2Yp0xq1hra?utm_source=generator"
-        width="100%"
-        height="452"
-        frameborder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; 
-      picture-in-picture"
-        loading="lazy"
-      ></iframe>
-    </section>
-    
+</div>
+
+<footer class="footer">
+    <p>Suhani Sharma &nbsp;&#10022;&nbsp; 2025</p>
+</footer>
+
+<script>
+const canvas = document.getElementById('stars');
+const ctx = canvas.getContext('2d');
+
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = document.body.scrollHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+const stars = Array.from({length: 220}, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.4 + 0.3,
+    a: Math.random(),
+    speed: Math.random() * 0.004 + 0.001
+}));
+
+function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(s => {
+        s.a += s.speed;
+        const alpha = 0.3 + 0.5 * Math.abs(Math.sin(s.a));
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(200, 210, 255, ${alpha})`;
+        ctx.fill();
+    });
+    requestAnimationFrame(drawStars);
+}
+drawStars();
+</script>
+
 </body>
 </html>
-
